@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "208916441098",
+    "project_id": "instalikeapp-3e94a",
+    "storage_bucket": "instalikeapp-3e94a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208916441098:android:f059d1821d1669f32357f3",
+        "android_client_info": {
+          "package_name": "com.vsu.instalikeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208916441098-3p174g2uope95hbttf7vvu4i51jgrk10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrE_2Eq8JX0CABlhHIAR_lxNjUmuOdvMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208916441098-3p174g2uope95hbttf7vvu4i51jgrk10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
