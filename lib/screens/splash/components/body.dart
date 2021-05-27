@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instalike_flutter_project/screens/sign_in/sign_in_screen.dart';
 
-// This is the best practice
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import 'splash_content.dart';
@@ -25,6 +24,7 @@ class _BodyState extends State<Body> {
       "image": "assets/images/splash-2.png"
     }
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

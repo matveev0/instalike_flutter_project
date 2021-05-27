@@ -72,8 +72,6 @@ class _ImagePost extends State<ImagePost> {
   bool liked;
   final String ownerId;
 
-  bool showHeart = false;
-
   var reference = FirebaseFirestore.instance.collection('posts');
   LocalUserModel user;
 
@@ -131,12 +129,6 @@ class _ImagePost extends State<ImagePost> {
             height: getProportionateScreenHeight(300),
             width: getProportionateScreenWidth(300),
           ),
-          /* CachedNetworkImage(
-            imageUrl: mediaUrl,
-            fit: BoxFit.fitWidth,
-            placeholder: (context, url) => loadingPlaceHolder,
-            errorWidget: (context, url, error) => Icon(Icons.error),
-          ),*/
         ],
       ),
     );
@@ -178,11 +170,6 @@ class _ImagePost extends State<ImagePost> {
     }
   }
 
-  Container loadingPlaceHolder = Container(
-    height: 400.0,
-    child: Center(child: CircularProgressIndicator()),
-  );
-
   @override
   Widget build(BuildContext context) {
     user = Provider.of<LocalUserModel>(context);
@@ -223,17 +210,10 @@ class _ImagePost extends State<ImagePost> {
     }
 
     if (!_liked) {
-      print('liking');
       setState(() {
-        likeCount = likeCount + 1;
+        likeCount++;
         liked = true;
         likes[userId] = true;
-        showHeart = true;
-      });
-      Timer(const Duration(milliseconds: 2000), () {
-        setState(() {
-          showHeart = false;
-        });
       });
       reference.doc(postId).update({'likes.$userId': true});
     }
